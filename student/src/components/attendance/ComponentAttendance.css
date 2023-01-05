@@ -1,0 +1,20 @@
+h3 {
+    color: rgb(34, 54, 113);
+}
+
+.enroll-info {
+    height: 50px;
+}
+
+.enroll-info > :nth-child(1) {
+    background-color: rgb(248, 250, 252);
+    border: 0.5px solid rgb(171, 171, 171);
+    font-size: 14;
+    font-weight: bold;
+}
+
+.enroll-info > :nth-child(2) {
+    border: 0.5px solid rgb(171, 171, 171);
+    height: 50px;
+    overflow-x: auto;
+}

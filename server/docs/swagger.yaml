@@ -1,0 +1,1407 @@
+basePath: /
+definitions:
+  model.Address:
+    properties:
+      addressContact:
+        type: string
+      baseInfoId:
+        type: integer
+      currentResidentialAddress:
+        type: string
+      permanentAddress:
+        type: string
+      placeOfBirth:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+    type: object
+  model.Admin:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      pass:
+        type: string
+    type: object
+  model.Attendance:
+    properties:
+      absenceWithoutPermission:
+        type: integer
+      baseInfoId:
+        type: integer
+      classCode:
+        type: string
+      courseCode:
+        $ref: '#/definitions/model.CourseCode'
+      courseCodeId:
+        type: integer
+      numberOfLessonsTaught:
+        type: integer
+      numberOfSchoolDays:
+        type: integer
+      semester:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+      studentCode:
+        type: string
+      unexcusedAbsence:
+        type: integer
+    type: object
+  model.Bank:
+    properties:
+      accountHolder:
+        type: string
+      accountNumber:
+        type: string
+      baseInfoId:
+        type: integer
+      branch:
+        type: string
+      name:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+    type: object
+  model.Class:
+    properties:
+      classCode:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.Contact:
+    properties:
+      baseInfoId:
+        type: integer
+      email:
+        type: string
+      otherEmail:
+        type: string
+      otherPhoneNumber:
+        type: string
+      phoneNumber:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+    type: object
+  model.CourseCode:
+    properties:
+      code:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      teacher:
+        $ref: '#/definitions/model.Teacher'
+      teacherId:
+        type: integer
+    type: object
+  model.GranduationInformation:
+    properties:
+      baseInfoId:
+        type: integer
+      graduationGrade:
+        type: string
+      numberOfGraduationDecisions:
+        type: string
+      rankAcademic:
+        type: string
+      ratingOfConduct:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+      yearOfDecision:
+        type: string
+    type: object
+  model.OverView:
+    properties:
+      baseInfoId:
+        type: integer
+      bloodGroup:
+        type: string
+      cccdNumber:
+        type: string
+      dateOfAdmissionToTheUnion:
+        type: string
+      dateRange:
+        type: string
+      decisionDay:
+        type: string
+      ethnic:
+        type: string
+      healthInsuranceCardNumber:
+        type: string
+      issuedBy:
+        type: string
+      nationality:
+        type: string
+      numberOfDecisionsToJoinTheParty:
+        type: string
+      partyAdmissionDate:
+        type: string
+      policyObject:
+        type: string
+      priorityObject:
+        type: string
+      religion:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+    type: object
+  model.Parents:
+    properties:
+      academicLevel:
+        type: string
+      baseInfoId:
+        type: integer
+      dateOfBirth:
+        type: string
+      economicAfter1975:
+        type: string
+      economicBefore1975:
+        type: string
+      email:
+        type: string
+      ethnic:
+        type: string
+      gender:
+        type: boolean
+      name:
+        type: string
+      permanentResidence:
+        type: string
+      phoneNumber:
+        type: string
+      religion:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+    type: object
+  model.ResultsOfAnnouncement:
+    properties:
+      anh:
+        type: number
+      award:
+        type: string
+      baseInfoId:
+        type: integer
+      combination:
+        type: string
+      congDan:
+        type: number
+      dia:
+        type: number
+      form:
+        type: string
+      hoa:
+        type: number
+      industryCode:
+        type: string
+      industryName:
+        type: string
+      internationalCertificate:
+        type: string
+      li:
+        type: number
+      sinh:
+        type: number
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+      su:
+        type: number
+      toan:
+        type: number
+      totalScoreForAdmission:
+        type: string
+      van:
+        type: number
+    type: object
+  model.SiBlings:
+    properties:
+      additionalInformation:
+        type: string
+      address:
+        type: string
+      baseInfoId:
+        type: integer
+      dateOfBirth:
+        type: string
+      job:
+        type: string
+      name:
+        type: string
+      relationship:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+    type: object
+  model.Student:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      pass:
+        type: string
+    type: object
+  model.StudentBaseInfo:
+    properties:
+      branch:
+        type: string
+      class:
+        type: string
+      course:
+        type: string
+      dateOfBirth:
+        type: string
+      department:
+        type: string
+      educationProgram:
+        type: string
+      email:
+        type: string
+      firstname:
+        type: string
+      gender:
+        type: boolean
+      id:
+        type: integer
+      image:
+        type: string
+      lastname:
+        type: string
+      position:
+        type: string
+      status:
+        type: boolean
+      student:
+        $ref: '#/definitions/model.Student'
+      studentCode:
+        type: string
+      studentId:
+        type: integer
+      teacher:
+        $ref: '#/definitions/model.Teacher'
+      teacherId:
+        type: integer
+      trainingSystem:
+        type: string
+    type: object
+  model.StudyScore:
+    properties:
+      baseInfoId:
+        type: integer
+      classCode:
+        type: string
+      courseCode:
+        $ref: '#/definitions/model.CourseCode'
+      courseCodeId:
+        type: integer
+      courseName:
+        type: string
+      credits:
+        type: integer
+      letterPoint:
+        type: string
+      scalePoint4:
+        type: number
+      scalePoint10:
+        type: number
+      semester:
+        type: string
+      shoolYear:
+        type: string
+      studentBaseInfo:
+        $ref: '#/definitions/model.StudentBaseInfo'
+      studentCode:
+        type: string
+    type: object
+  model.Teacher:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      pass:
+        type: string
+      phone:
+        type: string
+    type: object
+host: localhost:3000
+info:
+  contact: {}
+  description: This is server of ctsv
+  title: CTSV API
+  version: "1.0"
+paths:
+  /admin/base-info-student/{course}/{department}:
+    get:
+      consumes:
+      - application/json
+      description: Admin get list student base info with deprtment of student
+      parameters:
+      - description: Course
+        in: path
+        name: course
+        required: true
+        type: string
+      - description: Depathment
+        in: path
+        name: department
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with base info student
+  /admin/student-account:
+    get:
+      consumes:
+      - application/json
+      description: Admin get account student
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with account student
+  /admin/student-account/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create account student
+      parameters:
+      - description: List account student
+        format: model.Student
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Student'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with account student
+  /admin/student-address:
+    get:
+      consumes:
+      - application/json
+      description: Admin get contact of student
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with address
+  /admin/student-address/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update address
+      parameters:
+      - description: List address need update
+        format: model.Address
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Address'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with address
+  /admin/student-attendance/{semester}-{class_code}:
+    get:
+      consumes:
+      - application/json
+      description: Admin get attendance
+      parameters:
+      - description: semester
+        in: path
+        name: semester
+        required: true
+        type: string
+      - description: class code
+        in: path
+        name: class_code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with attendance
+  /admin/student-attendance/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create attendance student
+      parameters:
+      - description: List attendance
+        format: model.Attendance
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Attendance'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with attendance
+  /admin/student-attendance/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update attendance
+      parameters:
+      - description: List attendance need update
+        format: model.Attendance
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Attendance'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with attendance
+  /admin/student-bank:
+    get:
+      consumes:
+      - application/json
+      description: Admin get bank of student
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with bank
+  /admin/student-bank/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update bank of student
+      parameters:
+      - description: List bank need update
+        format: model.Bank
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Bank'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with bank
+  /admin/student-base-info:
+    get:
+      consumes:
+      - application/json
+      description: Admin get all base info of student
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with base info student
+  /admin/student-base-info/{course}:
+    get:
+      consumes:
+      - application/json
+      description: Admin get base info student of course
+      parameters:
+      - description: Course
+        in: path
+        name: course
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with base info student
+  /admin/student-base-info/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create base info student
+      parameters:
+      - description: List Base info student
+        format: model.StudentBaseInfo
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.StudentBaseInfo'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with base info student
+  /admin/student-base-info/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update student base info
+      parameters:
+      - description: List student base info need update
+        format: model.StudentBaseInfo
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.StudentBaseInfo'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with base info student
+  /admin/student-base-info/update-by-id:
+    put:
+      consumes:
+      - application/json
+      description: Admin update base info student by id
+      parameters:
+      - description: Student base info need update
+        format: model.StudentBaseinfo
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.StudentBaseInfo'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with base info student
+  /admin/student-class:
+    get:
+      consumes:
+      - application/json
+      description: Admin get class
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with class
+  /admin/student-class/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create class
+      parameters:
+      - description: class
+        format: model.Class
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Class'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with class
+  /admin/student-class/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update class
+      parameters:
+      - description: list class need update
+        format: model.Class
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Class'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with class
+  /admin/student-contact:
+    get:
+      consumes:
+      - application/json
+      description: Admin get contact student
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with contact
+  /admin/student-contact/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update contact
+      parameters:
+      - description: List contact need update
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Contact'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with contact
+  /admin/student-courseCode:
+    get:
+      consumes:
+      - application/json
+      description: Admin get course code
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with course code
+  /admin/student-courseCode/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create course code
+      parameters:
+      - description: Course code
+        format: model.CourseCode
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.CourseCode'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with course code
+  /admin/student-courseCode/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update course code
+      parameters:
+      - description: List course need update
+        format: model.CourseCode
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.CourseCode'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with course code
+  /admin/student-granduation:
+    get:
+      consumes:
+      - application/json
+      description: Admin get granduation information
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with granduation information
+  /admin/student-granduation/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update granduation information
+      parameters:
+      - description: list granduation information need update
+        format: model.GranduationInformation
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.GranduationInformation'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with granduation information
+  /admin/student-overview:
+    get:
+      consumes:
+      - application/json
+      description: Admin get overview student
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with overview student
+  /admin/student-overview/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update overview student
+      parameters:
+      - description: List Overview need update
+        format: model.OverView
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.OverView'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with overview student
+  /admin/student-parent/{parent}:
+    get:
+      consumes:
+      - application/json
+      description: Admin get info father
+      parameters:
+      - description: Father Or Mother
+        in: path
+        name: parent
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with parent
+  /admin/student-parent/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update info parents
+      parameters:
+      - description: Parents need update
+        format: model.Parents
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Parents'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with parent
+  /admin/student-resultsOfAnnouncement:
+    get:
+      consumes:
+      - application/json
+      description: Admin get Results Of Announcement
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with ResultsOfAnnouncement
+  /admin/student-resultsOfAnnouncement/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update ResultsOfAnnouncement
+      parameters:
+      - description: list ResultsOfAnnouncement need update
+        format: model.ResultsOfAnnouncement
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.ResultsOfAnnouncement'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with ResultsOfAnnouncement
+  /admin/student-siblings:
+    get:
+      consumes:
+      - application/json
+      description: Admin get info siblings
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with siblings
+  /admin/student-siblings/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update siblings
+      parameters:
+      - description: List siblings need update
+        format: model.SiBlings
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.SiBlings'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with siblings
+  /admin/student-studyScore/{class_code}-{course_code}-{school_year}:
+    get:
+      consumes:
+      - application/json
+      description: Admin get study score of class code and course code and school
+        year
+      parameters:
+      - description: class code
+        in: path
+        name: class_code
+        required: true
+        type: string
+      - description: course code
+        in: path
+        name: course_code
+        required: true
+        type: string
+      - description: school code
+        in: path
+        name: school_code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with study score
+  /admin/student-studyScore/{course_code}-{school_year}:
+    get:
+      consumes:
+      - application/json
+      description: Admin get study score of course code and school year
+      parameters:
+      - description: course code
+        in: path
+        name: course_code
+        required: true
+        type: string
+      - description: school year
+        in: path
+        name: school_year
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with study score
+  /admin/student-studyScore/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create study score
+      parameters:
+      - description: list study score
+        format: model.StudyScore
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.StudyScore'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with study score
+  /admin/student-studyScore/update:
+    put:
+      consumes:
+      - application/json
+      description: Admin update study score
+      parameters:
+      - description: List study score need update
+        format: model.StudyScore
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.StudyScore'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with study score
+  /admin/teacher-account:
+    get:
+      consumes:
+      - application/json
+      description: Admin get account teacher
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with account teacher
+  /admin/teacher-account/create:
+    post:
+      consumes:
+      - application/json
+      description: Admin create account teacher
+      parameters:
+      - description: List account teacher
+        format: model.Teacher
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Teacher'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Admin with account teacher
+  /element/courses:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Element
+  /element/department:
+    get:
+      consumes:
+      - application/json
+      description: get department
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Element
+  /login/admin:
+    post:
+      consumes:
+      - application/json
+      description: Login admin
+      parameters:
+      - description: Account admin
+        format: model.Admin
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.Admin'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Login
+  /login/student:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Student
+        format: model.Student
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.Student'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Login
+  /login/teacher:
+    post:
+      consumes:
+      - application/json
+      description: Teacher login
+      parameters:
+      - description: Account teacher
+        format: model.Teacher
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.Teacher'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Login
+  /student/address:
+    get:
+      consumes:
+      - application/json
+      description: Student get address
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with address
+  /student/address/update:
+    put:
+      consumes:
+      - application/json
+      description: Student update address
+      parameters:
+      - description: Address need update
+        format: model.Address
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.Address'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with address
+  /student/attendance:
+    get:
+      consumes:
+      - application/json
+      description: Student get attendance
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with attendance
+  /student/bank:
+    get:
+      consumes:
+      - application/json
+      description: Student get bank
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with bank
+  /student/bank/update:
+    put:
+      consumes:
+      - application/json
+      description: Student update bank
+      parameters:
+      - description: Bank need update
+        format: model.Bank
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.Bank'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with bank
+  /student/base_info:
+    get:
+      consumes:
+      - application/json
+      description: Student get base info
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with base info
+  /student/contact:
+    get:
+      consumes:
+      - application/json
+      description: Student get contact
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with contact
+  /student/granduation_onformation:
+    get:
+      consumes:
+      - application/json
+      description: Student get granduation information
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with granduation information
+  /student/overview:
+    get:
+      consumes:
+      - application/json
+      description: Student get overview
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with overview
+  /student/overview/update:
+    put:
+      consumes:
+      - application/json
+      description: Student update overview
+      parameters:
+      - description: OverView need update
+        format: model.OverView
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.OverView'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with overview
+  /student/parents:
+    get:
+      consumes:
+      - application/json
+      description: Student get info parents
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with parents
+  /student/parents/update:
+    put:
+      consumes:
+      - application/json
+      description: Student update info parents
+      parameters:
+      - description: info parents need update
+        format: model.Parents
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Parents'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with parents
+  /student/results_of_announcement:
+    get:
+      consumes:
+      - application/json
+      description: student get results of announcement
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with results of announcement
+  /student/siblings:
+    get:
+      consumes:
+      - application/json
+      description: Student get siblings
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with siblings
+  /student/siblings/create:
+    post:
+      consumes:
+      - application/json
+      description: Student create siblings
+      parameters:
+      - description: Siblings
+        format: model.SiBlings
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.SiBlings'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with siblings
+  /student/siblings/delete:
+    delete:
+      consumes:
+      - application/json
+      description: Student delete siblings
+      parameters:
+      - description: siblings need update
+        format: model.SiBlings
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.SiBlings'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with siblings
+  /student/study_score:
+    get:
+      consumes:
+      - application/json
+      description: Student get study score
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with study score
+  /studet/contact/update:
+    put:
+      consumes:
+      - application/json
+      description: Student update contact
+      parameters:
+      - description: Contact need update
+        format: model.Contact
+        in: body
+        name: req
+        schema:
+          $ref: '#/definitions/model.Contact'
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Student with contact
+  /teacher/{course_code_id}/create_studyScore_attendance:
+    post:
+      consumes:
+      - application/json
+      description: Teacher create studyScore and attendance
+      parameters:
+      - description: course_code_id
+        in: path
+        name: course_code_id
+        required: true
+        type: string
+      - description: List Base Info
+        format: model.StudentBaseInfo
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.StudentBaseInfo'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with studyScore and attendance
+  /teacher/attendance/{course_code_id}:
+    get:
+      consumes:
+      - application/json
+      description: Teacher get attendance
+      parameters:
+      - description: Course Code Id
+        in: path
+        name: course_code_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with studyScore and attendance
+  /teacher/attendance/update:
+    put:
+      consumes:
+      - application/json
+      description: Teacher update attendance
+      parameters:
+      - description: List attendance
+        format: model.Attendance
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.Attendance'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with studyScore and attendance
+  /teacher/course_code:
+    get:
+      consumes:
+      - application/json
+      description: Teacher get all course code
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with course code
+  /teacher/course_code/{course_code_id}:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Course  Code Id
+        in: path
+        name: course_code_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with course code
+  /teacher/study_score/{course_code_id}:
+    get:
+      consumes:
+      - application/json
+      description: Teacher get study score
+      parameters:
+      - description: Course Code Id
+        in: path
+        name: course_code_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with studyScore and attendance
+  /teacher/study_score/update:
+    put:
+      consumes:
+      - application/json
+      description: Teacher update study score
+      parameters:
+      - description: List study score
+        format: model.StudyScore
+        in: body
+        name: req
+        schema:
+          items:
+            $ref: '#/definitions/model.StudyScore'
+          type: array
+      produces:
+      - application/json
+      responses: {}
+      tags:
+      - Teacher with studyScore and attendance
+swagger: "2.0"

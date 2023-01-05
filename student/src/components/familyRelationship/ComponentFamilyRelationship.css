@@ -1,0 +1,13 @@
+h3 {
+    color: rgb(34, 54, 113);
+    text-transform: uppercase;
+}
+
+.list-info > li {
+    list-style-type: none;
+}
+
+button{
+    z-index: 2;
+    margin-right: 10px;
+}

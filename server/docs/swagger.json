@@ -1,0 +1,2133 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is server of ctsv",
+        "title": "CTSV API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/admin/base-info-student/{course}/{department}": {
+            "get": {
+                "description": "Admin get list student base info with deprtment of student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with base info student"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Course",
+                        "name": "course",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Depathment",
+                        "name": "department",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-account": {
+            "get": {
+                "description": "Admin get account student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with account student"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-account/create": {
+            "post": {
+                "description": "Admin create account student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with account student"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Student",
+                        "description": "List account student",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Student"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-address": {
+            "get": {
+                "description": "Admin get contact of student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with address"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-address/update": {
+            "put": {
+                "description": "Admin update address",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with address"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Address",
+                        "description": "List address need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Address"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-attendance/create": {
+            "post": {
+                "description": "Admin create attendance student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with attendance"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Attendance",
+                        "description": "List attendance",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Attendance"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-attendance/update": {
+            "put": {
+                "description": "Admin update attendance",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with attendance"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Attendance",
+                        "description": "List attendance need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Attendance"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-attendance/{semester}-{class_code}": {
+            "get": {
+                "description": "Admin get attendance",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with attendance"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "semester",
+                        "name": "semester",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "class code",
+                        "name": "class_code",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-bank": {
+            "get": {
+                "description": "Admin get bank of student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with bank"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-bank/update": {
+            "put": {
+                "description": "Admin update bank of student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with bank"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Bank",
+                        "description": "List bank need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Bank"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-base-info": {
+            "get": {
+                "description": "Admin get all base info of student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with base info student"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-base-info/create": {
+            "post": {
+                "description": "Admin create base info student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with base info student"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.StudentBaseInfo",
+                        "description": "List Base info student",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.StudentBaseInfo"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-base-info/update": {
+            "put": {
+                "description": "Admin update student base info",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with base info student"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.StudentBaseInfo",
+                        "description": "List student base info need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.StudentBaseInfo"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-base-info/update-by-id": {
+            "put": {
+                "description": "Admin update base info student by id",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with base info student"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.StudentBaseinfo",
+                        "description": "Student base info need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.StudentBaseInfo"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-base-info/{course}": {
+            "get": {
+                "description": "Admin get base info student of course",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with base info student"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Course",
+                        "name": "course",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-class": {
+            "get": {
+                "description": "Admin get class",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with class"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-class/create": {
+            "post": {
+                "description": "Admin create class",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with class"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Class",
+                        "description": "class",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Class"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-class/update": {
+            "put": {
+                "description": "Admin update class",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with class"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Class",
+                        "description": "list class need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Class"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-contact": {
+            "get": {
+                "description": "Admin get contact student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with contact"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-contact/update": {
+            "put": {
+                "description": "Admin update contact",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with contact"
+                ],
+                "parameters": [
+                    {
+                        "description": "List contact need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Contact"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-courseCode": {
+            "get": {
+                "description": "Admin get course code",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with course code"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-courseCode/create": {
+            "post": {
+                "description": "Admin create course code",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with course code"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.CourseCode",
+                        "description": "Course code",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.CourseCode"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-courseCode/update": {
+            "put": {
+                "description": "Admin update course code",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with course code"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.CourseCode",
+                        "description": "List course need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.CourseCode"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-granduation": {
+            "get": {
+                "description": "Admin get granduation information",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with granduation information"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-granduation/update": {
+            "put": {
+                "description": "Admin update granduation information",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with granduation information"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.GranduationInformation",
+                        "description": "list granduation information need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.GranduationInformation"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-overview": {
+            "get": {
+                "description": "Admin get overview student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with overview student"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-overview/update": {
+            "put": {
+                "description": "Admin update overview student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with overview student"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.OverView",
+                        "description": "List Overview need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.OverView"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-parent/update": {
+            "put": {
+                "description": "Admin update info parents",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with parent"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Parents",
+                        "description": "Parents need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Parents"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-parent/{parent}": {
+            "get": {
+                "description": "Admin get info father",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with parent"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Father Or Mother",
+                        "name": "parent",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-resultsOfAnnouncement": {
+            "get": {
+                "description": "Admin get Results Of Announcement",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with ResultsOfAnnouncement"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-resultsOfAnnouncement/update": {
+            "put": {
+                "description": "Admin update ResultsOfAnnouncement",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with ResultsOfAnnouncement"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.ResultsOfAnnouncement",
+                        "description": "list ResultsOfAnnouncement need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.ResultsOfAnnouncement"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-siblings": {
+            "get": {
+                "description": "Admin get info siblings",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with siblings"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-siblings/update": {
+            "put": {
+                "description": "Admin update siblings",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with siblings"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.SiBlings",
+                        "description": "List siblings need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.SiBlings"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-studyScore/create": {
+            "post": {
+                "description": "Admin create study score",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with study score"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.StudyScore",
+                        "description": "list study score",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.StudyScore"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-studyScore/update": {
+            "put": {
+                "description": "Admin update study score",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with study score"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.StudyScore",
+                        "description": "List study score need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.StudyScore"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-studyScore/{class_code}-{course_code}-{school_year}": {
+            "get": {
+                "description": "Admin get study score of class code and course code and school year",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with study score"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "class code",
+                        "name": "class_code",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "course code",
+                        "name": "course_code",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "school code",
+                        "name": "school_code",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/student-studyScore/{course_code}-{school_year}": {
+            "get": {
+                "description": "Admin get study score of course code and school year",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with study score"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "course code",
+                        "name": "course_code",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "school year",
+                        "name": "school_year",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/teacher-account": {
+            "get": {
+                "description": "Admin get account teacher",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with account teacher"
+                ],
+                "responses": {}
+            }
+        },
+        "/admin/teacher-account/create": {
+            "post": {
+                "description": "Admin create account teacher",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin with account teacher"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Teacher",
+                        "description": "List account teacher",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Teacher"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/element/courses": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Element"
+                ],
+                "responses": {}
+            }
+        },
+        "/element/department": {
+            "get": {
+                "description": "get department",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Element"
+                ],
+                "responses": {}
+            }
+        },
+        "/login/admin": {
+            "post": {
+                "description": "Login admin",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Login"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Admin",
+                        "description": "Account admin",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.Admin"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/login/student": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Login"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Student",
+                        "description": "Student",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.Student"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/login/teacher": {
+            "post": {
+                "description": "Teacher login",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Login"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Teacher",
+                        "description": "Account teacher",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.Teacher"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/address": {
+            "get": {
+                "description": "Student get address",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with address"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/address/update": {
+            "put": {
+                "description": "Student update address",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with address"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Address",
+                        "description": "Address need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.Address"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/attendance": {
+            "get": {
+                "description": "Student get attendance",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with attendance"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/bank": {
+            "get": {
+                "description": "Student get bank",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with bank"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/bank/update": {
+            "put": {
+                "description": "Student update bank",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with bank"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Bank",
+                        "description": "Bank need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.Bank"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/base_info": {
+            "get": {
+                "description": "Student get base info",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with base info"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/contact": {
+            "get": {
+                "description": "Student get contact",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with contact"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/granduation_onformation": {
+            "get": {
+                "description": "Student get granduation information",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with granduation information"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/overview": {
+            "get": {
+                "description": "Student get overview",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with overview"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/overview/update": {
+            "put": {
+                "description": "Student update overview",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with overview"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.OverView",
+                        "description": "OverView need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.OverView"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/parents": {
+            "get": {
+                "description": "Student get info parents",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with parents"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/parents/update": {
+            "put": {
+                "description": "Student update info parents",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with parents"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Parents",
+                        "description": "info parents need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Parents"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/results_of_announcement": {
+            "get": {
+                "description": "student get results of announcement",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with results of announcement"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/siblings": {
+            "get": {
+                "description": "Student get siblings",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with siblings"
+                ],
+                "responses": {}
+            }
+        },
+        "/student/siblings/create": {
+            "post": {
+                "description": "Student create siblings",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with siblings"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.SiBlings",
+                        "description": "Siblings",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.SiBlings"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/siblings/delete": {
+            "delete": {
+                "description": "Student delete siblings",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with siblings"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.SiBlings",
+                        "description": "siblings need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.SiBlings"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/student/study_score": {
+            "get": {
+                "description": "Student get study score",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with study score"
+                ],
+                "responses": {}
+            }
+        },
+        "/studet/contact/update": {
+            "put": {
+                "description": "Student update contact",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Student with contact"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Contact",
+                        "description": "Contact need update",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/model.Contact"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/attendance/update": {
+            "put": {
+                "description": "Teacher update attendance",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with studyScore and attendance"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.Attendance",
+                        "description": "List attendance",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Attendance"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/attendance/{course_code_id}": {
+            "get": {
+                "description": "Teacher get attendance",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with studyScore and attendance"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Course Code Id",
+                        "name": "course_code_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/course_code": {
+            "get": {
+                "description": "Teacher get all course code",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with course code"
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/course_code/{course_code_id}": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with course code"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Course  Code Id",
+                        "name": "course_code_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/study_score/update": {
+            "put": {
+                "description": "Teacher update study score",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with studyScore and attendance"
+                ],
+                "parameters": [
+                    {
+                        "format": "model.StudyScore",
+                        "description": "List study score",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.StudyScore"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/study_score/{course_code_id}": {
+            "get": {
+                "description": "Teacher get study score",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with studyScore and attendance"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Course Code Id",
+                        "name": "course_code_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/teacher/{course_code_id}/create_studyScore_attendance": {
+            "post": {
+                "description": "Teacher create studyScore and attendance",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Teacher with studyScore and attendance"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "course_code_id",
+                        "name": "course_code_id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "format": "model.StudentBaseInfo",
+                        "description": "List Base Info",
+                        "name": "req",
+                        "in": "body",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.StudentBaseInfo"
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    },
+    "definitions": {
+        "model.Address": {
+            "type": "object",
+            "properties": {
+                "addressContact": {
+                    "type": "string"
+                },
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "currentResidentialAddress": {
+                    "type": "string"
+                },
+                "permanentAddress": {
+                    "type": "string"
+                },
+                "placeOfBirth": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                }
+            }
+        },
+        "model.Admin": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "pass": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Attendance": {
+            "type": "object",
+            "properties": {
+                "absenceWithoutPermission": {
+                    "type": "integer"
+                },
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "classCode": {
+                    "type": "string"
+                },
+                "courseCode": {
+                    "$ref": "#/definitions/model.CourseCode"
+                },
+                "courseCodeId": {
+                    "type": "integer"
+                },
+                "numberOfLessonsTaught": {
+                    "type": "integer"
+                },
+                "numberOfSchoolDays": {
+                    "type": "integer"
+                },
+                "semester": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                },
+                "studentCode": {
+                    "type": "string"
+                },
+                "unexcusedAbsence": {
+                    "type": "integer"
+                }
+            }
+        },
+        "model.Bank": {
+            "type": "object",
+            "properties": {
+                "accountHolder": {
+                    "type": "string"
+                },
+                "accountNumber": {
+                    "type": "string"
+                },
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "branch": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                }
+            }
+        },
+        "model.Class": {
+            "type": "object",
+            "properties": {
+                "classCode": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Contact": {
+            "type": "object",
+            "properties": {
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "otherEmail": {
+                    "type": "string"
+                },
+                "otherPhoneNumber": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                }
+            }
+        },
+        "model.CourseCode": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "teacher": {
+                    "$ref": "#/definitions/model.Teacher"
+                },
+                "teacherId": {
+                    "type": "integer"
+                }
+            }
+        },
+        "model.GranduationInformation": {
+            "type": "object",
+            "properties": {
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "graduationGrade": {
+                    "type": "string"
+                },
+                "numberOfGraduationDecisions": {
+                    "type": "string"
+                },
+                "rankAcademic": {
+                    "type": "string"
+                },
+                "ratingOfConduct": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                },
+                "yearOfDecision": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.OverView": {
+            "type": "object",
+            "properties": {
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "bloodGroup": {
+                    "type": "string"
+                },
+                "cccdNumber": {
+                    "type": "string"
+                },
+                "dateOfAdmissionToTheUnion": {
+                    "type": "string"
+                },
+                "dateRange": {
+                    "type": "string"
+                },
+                "decisionDay": {
+                    "type": "string"
+                },
+                "ethnic": {
+                    "type": "string"
+                },
+                "healthInsuranceCardNumber": {
+                    "type": "string"
+                },
+                "issuedBy": {
+                    "type": "string"
+                },
+                "nationality": {
+                    "type": "string"
+                },
+                "numberOfDecisionsToJoinTheParty": {
+                    "type": "string"
+                },
+                "partyAdmissionDate": {
+                    "type": "string"
+                },
+                "policyObject": {
+                    "type": "string"
+                },
+                "priorityObject": {
+                    "type": "string"
+                },
+                "religion": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                }
+            }
+        },
+        "model.Parents": {
+            "type": "object",
+            "properties": {
+                "academicLevel": {
+                    "type": "string"
+                },
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "dateOfBirth": {
+                    "type": "string"
+                },
+                "economicAfter1975": {
+                    "type": "string"
+                },
+                "economicBefore1975": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "ethnic": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "permanentResidence": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "religion": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                }
+            }
+        },
+        "model.ResultsOfAnnouncement": {
+            "type": "object",
+            "properties": {
+                "anh": {
+                    "type": "number"
+                },
+                "award": {
+                    "type": "string"
+                },
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "combination": {
+                    "type": "string"
+                },
+                "congDan": {
+                    "type": "number"
+                },
+                "dia": {
+                    "type": "number"
+                },
+                "form": {
+                    "type": "string"
+                },
+                "hoa": {
+                    "type": "number"
+                },
+                "industryCode": {
+                    "type": "string"
+                },
+                "industryName": {
+                    "type": "string"
+                },
+                "internationalCertificate": {
+                    "type": "string"
+                },
+                "li": {
+                    "type": "number"
+                },
+                "sinh": {
+                    "type": "number"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                },
+                "su": {
+                    "type": "number"
+                },
+                "toan": {
+                    "type": "number"
+                },
+                "totalScoreForAdmission": {
+                    "type": "string"
+                },
+                "van": {
+                    "type": "number"
+                }
+            }
+        },
+        "model.SiBlings": {
+            "type": "object",
+            "properties": {
+                "additionalInformation": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "dateOfBirth": {
+                    "type": "string"
+                },
+                "job": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "relationship": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                }
+            }
+        },
+        "model.Student": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "pass": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.StudentBaseInfo": {
+            "type": "object",
+            "properties": {
+                "branch": {
+                    "type": "string"
+                },
+                "class": {
+                    "type": "string"
+                },
+                "course": {
+                    "type": "string"
+                },
+                "dateOfBirth": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "educationProgram": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "boolean"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "student": {
+                    "$ref": "#/definitions/model.Student"
+                },
+                "studentCode": {
+                    "type": "string"
+                },
+                "studentId": {
+                    "type": "integer"
+                },
+                "teacher": {
+                    "$ref": "#/definitions/model.Teacher"
+                },
+                "teacherId": {
+                    "type": "integer"
+                },
+                "trainingSystem": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.StudyScore": {
+            "type": "object",
+            "properties": {
+                "baseInfoId": {
+                    "type": "integer"
+                },
+                "classCode": {
+                    "type": "string"
+                },
+                "courseCode": {
+                    "$ref": "#/definitions/model.CourseCode"
+                },
+                "courseCodeId": {
+                    "type": "integer"
+                },
+                "courseName": {
+                    "type": "string"
+                },
+                "credits": {
+                    "type": "integer"
+                },
+                "letterPoint": {
+                    "type": "string"
+                },
+                "scalePoint10": {
+                    "type": "number"
+                },
+                "scalePoint4": {
+                    "type": "number"
+                },
+                "semester": {
+                    "type": "string"
+                },
+                "shoolYear": {
+                    "type": "string"
+                },
+                "studentBaseInfo": {
+                    "$ref": "#/definitions/model.StudentBaseInfo"
+                },
+                "studentCode": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Teacher": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "pass": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

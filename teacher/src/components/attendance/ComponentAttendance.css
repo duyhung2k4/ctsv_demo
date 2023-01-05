@@ -1,0 +1,25 @@
+.link {
+    color: black;
+    border: 1px solid black;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+select {
+    height: 30px;
+}
+
+select:hover{
+    cursor: pointer;
+}
+
+option:hover{
+    cursor: pointer;
+}
+
+button {
+    margin-right: 10px;
+}
